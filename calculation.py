@@ -18,8 +18,8 @@ class Departure:
         print ("departure from Tierpark to Alexanderplatz: {}\nand departure from Alexanderplatz to Tierpark: {}".format(time_to_work,time_to_home))
 
         # calculating 30 minutes before the departure time
-        def time_change(departure,minutes=30):
-            change = dt.timedelta(minutes)
+        def time_change(departure,time_in_minutes=30):
+            change = dt.timedelta(minutes=time_in_minutes)
             reminder_before_departure = departure - change
             reminder_before_departure_in_str = reminder_before_departure.strftime("%H:%M:%S")
             return reminder_before_departure_in_str
